@@ -1,0 +1,180 @@
+============= i-011ba7178a40d016f ==============
+----------------------------------------
+/var/log/web.stdout.log
+----------------------------------------
+Oct 30 15:33:42 ip-172-31-11-236 web[2137]: [2026-10-30 15:33:42 +0000] [2137] [INFO] Starting gunicorn 26.2.0
+Oct 30 15:33:42 ip-172-31-11-236 web[2137]: [2026-10-30 15:33:42 +0000] [2137] [INFO] Listening at: http://127.0.0.1:8000 (2137)
+Oct 30 15:33:42 ip-172-31-11-236 web[2137]: [2026-10-30 15:33:42 +0000] [2137] [INFO] Using worker: gthread
+Oct 30 15:33:42 ip-172-31-11-236 web[2141]: [2026-10-30 15:33:42 +0000] [2141] [INFO] Booting worker with pid: 2141
+Oct 30 15:33:42 ip-172-31-11-236 web[2137]: [2026-10-30 15:33:42 +0000] [2137] [INFO] Control socket listening at /home/webapp/.gunicorn/gunicorn.ctl
+Oct 30 16:24:43 ip-172-31-11-236 web[2137]: [2026-10-30 16:24:43 +0000] [2137] [INFO] Handling signal: term
+Oct 30 16:24:43 ip-172-31-11-236 web[2141]: [2026-10-30 16:24:43 +0000] [2141] [INFO] Worker exiting (pid: 2141)
+Oct 30 16:24:43 ip-172-31-11-236 web[2137]: [2026-10-30 16:24:43 +0000] [2137] [INFO] Worker (pid:2141) was sent SIGTERM!
+Oct 30 16:24:43 ip-172-31-11-236 web[2137]: [2026-10-30 16:24:43 +0000] [2137] [INFO] Shutting down: Master
+Oct 30 16:24:45 ip-172-31-11-236 web[4555]: [2026-10-30 16:24:45 +0000] [4555] [INFO] Starting gunicorn 26.2.0
+Oct 30 16:24:45 ip-172-31-11-236 web[4555]: [2026-10-30 16:24:45 +0000] [4555] [INFO] Listening at: http://127.0.0.1:8000 (4555)
+Oct 30 16:24:45 ip-172-31-11-236 web[4555]: [2026-10-30 16:24:45 +0000] [4555] [INFO] Using worker: gthread
+Oct 30 16:24:45 ip-172-31-11-236 web[4559]: [2026-10-30 16:24:45 +0000] [4559] [INFO] Booting worker with pid: 4559
+Oct 30 16:24:45 ip-172-31-11-236 web[4555]: [2026-10-30 16:24:45 +0000] [4555] [INFO] Control socket listening at /home/webapp/.gunicorn/gunicorn.ctl
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]: [2026-10-30 16:26:47,654] ERROR in app: Exception on /tasks [GET]
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]: Traceback (most recent call last):
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:    response = self.full_dispatch_request()
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:    rv = self.handle_user_exception(e)
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:    rv = self.dispatch_request()
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:         ^^^^^^^^^^^^^^^^^^^^^^^
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:  File "/var/app/current/app.py", line 9, in get_tasks
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:    result = table.scan()
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:             ^^^^^^^^^^^^
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/boto3/resources/factory.py", line 581, in do_action
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:    response = action(self, *args, **kwargs)
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/boto3/resources/action.py", line 88, in __call__
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:    response = getattr(parent.meta.client, operation_name)(*args, **params)
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/botocore/client.py", line 606, in _api_call
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:    return self._make_api_call(operation_name, kwargs)
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/botocore/context.py", line 123, in wrapper
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:    return func(*args, **kwargs)
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:           ^^^^^^^^^^^^^^^^^^^^^
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/botocore/client.py", line 1094, in _make_api_call
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]:    raise error_class(parsed_response, operation_name)
+Oct 30 16:26:47 ip-172-31-11-236 web[4559]: botocore.exceptions.ClientError: An error occurred (UnrecognizedClientException) when calling the Scan operation: The security token included in the request is invalid.
+
+
+----------------------------------------
+/var/log/eb-engine.log
+----------------------------------------
+2026/10/30 16:24:42.762976 [INFO] Executing instruction: stop X-Ray
+2026/10/30 16:24:42.762979 [INFO] stop X-Ray ...
+2026/10/30 16:24:42.762991 [INFO] Running command: systemctl show -p PartOf xray.service
+2026/10/30 16:24:42.776644 [WARN] stopProcess Warning: process xray is not registered 
+2026/10/30 16:24:42.776670 [INFO] Running command: systemctl stop xray.service
+2026/10/30 16:24:42.791358 [INFO] Executing instruction: stop proxy
+2026/10/30 16:24:42.791390 [INFO] Running command: systemctl show -p PartOf httpd.service
+2026/10/30 16:24:42.805443 [WARN] deregisterProcess Warning: process httpd is not registered, skipping...
+
+2026/10/30 16:24:42.805473 [INFO] Running command: systemctl show -p PartOf nginx.service
+2026/10/30 16:24:42.816961 [INFO] Running command: systemctl is-active nginx.service
+2026/10/30 16:24:42.824913 [INFO] Running command: systemctl show -p PartOf nginx.service
+2026/10/30 16:24:42.833790 [INFO] Running command: systemctl stop nginx.service
+2026/10/30 16:24:43.042368 [INFO] Running command: systemctl disable nginx.service
+2026/10/30 16:24:43.256683 [INFO] Running command: systemctl daemon-reload
+2026/10/30 16:24:43.500066 [INFO] Running command: systemctl reset-failed
+2026/10/30 16:24:43.509981 [INFO] Executing instruction: FlipApplication
+2026/10/30 16:24:43.510006 [INFO] Fetching environment variables...
+2026/10/30 16:24:43.510198 [INFO] Purge old process...
+2026/10/30 16:24:43.510223 [INFO] Running command: systemctl stop eb-app.target
+2026/10/30 16:24:43.527806 [INFO] Running command: systemctl show -p ConsistsOf eb-app.target | cut -d= -f2
+2026/10/30 16:24:43.541663 [INFO] web.service
+
+2026/10/30 16:24:43.541683 [INFO] deregistering process: web
+2026/10/30 16:24:43.541722 [INFO] Running command: systemctl show -p PartOf web.service
+2026/10/30 16:24:43.554794 [INFO] Running command: systemctl is-active web.service
+2026/10/30 16:24:43.564403 [INFO] Running command: systemctl disable web.service
+2026/10/30 16:24:43.821979 [INFO] Removed "/etc/systemd/system/multi-user.target.wants/web.service".
+
+2026/10/30 16:24:43.822057 [INFO] Running command: systemctl daemon-reload
+2026/10/30 16:24:44.117730 [INFO] Running command: systemctl reset-failed
+2026/10/30 16:24:44.126380 [INFO] Running command: systemctl is-active web.service
+2026/10/30 16:24:44.134045 [INFO] Process web has been fully terminated
+2026/10/30 16:24:44.134072 [INFO] All processes have been fully terminated
+2026/10/30 16:24:44.134093 [INFO] Removing /var/app/current/ if it exists
+2026/10/30 16:24:44.224210 [INFO] Renaming /var/app/staging/ to /var/app/current/
+2026/10/30 16:24:44.224265 [INFO] Register application processes...
+2026/10/30 16:24:44.224270 [INFO] Registering the proc: web
+
+2026/10/30 16:24:44.224281 [INFO] Running command: systemctl show -p PartOf web.service
+2026/10/30 16:24:44.249829 [INFO] Running command: systemctl daemon-reload
+2026/10/30 16:24:44.504327 [INFO] Running command: systemctl reset-failed
+2026/10/30 16:24:44.512216 [INFO] Running command: systemctl is-enabled eb-app.target
+2026/10/30 16:24:44.520842 [INFO] Running command: systemctl enable eb-app.target
+2026/10/30 16:24:44.756227 [INFO] Running command: systemctl start eb-app.target
+2026/10/30 16:24:44.765175 [INFO] Running command: systemctl enable web.service
+2026/10/30 16:24:45.003653 [INFO] Created symlink /etc/systemd/system/multi-user.target.wants/web.service → /etc/systemd/system/web.service.
+
+2026/10/30 16:24:45.003691 [INFO] Running command: systemctl show -p PartOf web.service
+2026/10/30 16:24:45.017070 [INFO] Running command: systemctl is-active web.service
+2026/10/30 16:24:45.025192 [INFO] Running command: systemctl start web.service
+2026/10/30 16:24:47.089400 [INFO] Executing instruction: start X-Ray
+2026/10/30 16:24:47.089411 [INFO] X-Ray is not enabled.
+2026/10/30 16:24:47.089414 [INFO] Executing instruction: start proxy with new configuration
+2026/10/30 16:24:47.089437 [INFO] Running command: /usr/sbin/nginx -t -c /var/proxy/staging/nginx/nginx.conf
+2026/10/30 16:24:47.107876 [INFO] nginx: [warn] could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+nginx: the configuration file /var/proxy/staging/nginx/nginx.conf syntax is ok
+nginx: configuration file /var/proxy/staging/nginx/nginx.conf test is successful
+
+2026/10/30 16:24:47.108126 [INFO] Running command: cp -rp /var/proxy/staging/nginx/* /etc/nginx
+2026/10/30 16:24:47.111231 [INFO] Running command: systemctl show -p PartOf nginx.service
+2026/10/30 16:24:47.127488 [INFO] Running command: systemctl daemon-reload
+2026/10/30 16:24:47.376237 [INFO] Running command: systemctl reset-failed
+2026/10/30 16:24:47.385206 [INFO] Running command: systemctl show -p PartOf nginx.service
+2026/10/30 16:24:47.398006 [INFO] Running command: systemctl is-active nginx.service
+2026/10/30 16:24:47.406720 [INFO] Running command: systemctl start nginx.service
+2026/10/30 16:24:47.523712 [INFO] Executing instruction: configureSqsd
+2026/10/30 16:24:47.523731 [INFO] This is a web server environment instance, skip configure sqsd daemon ...
+2026/10/30 16:24:47.523740 [INFO] Executing instruction: startSqsd
+2026/10/30 16:24:47.523743 [INFO] This is a web server environment instance, skip start sqsd daemon ...
+2026/10/30 16:24:47.523748 [INFO] Executing instruction: Track pids in healthd
+2026/10/30 16:24:47.523759 [INFO] This is an enhanced health env...
+2026/10/30 16:24:47.523770 [INFO] Running command: systemctl show -p ConsistsOf aws-eb.target | cut -d= -f2
+2026/10/30 16:24:47.534565 [INFO] nginx.service cfn-hup.service healthd.service
+
+2026/10/30 16:24:47.534595 [INFO] Running command: systemctl show -p ConsistsOf eb-app.target | cut -d= -f2
+2026/10/30 16:24:47.544743 [INFO] web.service
+
+2026/10/30 16:24:47.544985 [INFO] Executing instruction: RunConfigDeployPostDeployHooks
+2026/10/30 16:24:47.544994 [INFO] No hooks found in .platform/confighooks/postdeploy/, skipping
+2026/10/30 16:24:47.544997 [INFO] Executing cleanup logic
+2026/10/30 16:24:47.545069 [INFO] CommandService Response: {"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"Engine execution has succeeded.","returncode":0,"events":[{"msg":"Instance deployment successfully generated a 'Procfile'.","timestamp":1793377479999,"severity":"INFO"},{"msg":"Instance deployment completed successfully.","timestamp":1793377487545,"severity":"INFO"}]}]}
+
+2026/10/30 16:24:47.570703 [INFO] Platform Engine finished execution on command: config-deploy
+
+2026/10/30 16:27:06.009386 [INFO] Starting...
+2026/10/30 16:27:06.009453 [INFO] Starting EBPlatform-PlatformEngine
+2026/10/30 16:27:06.009477 [INFO] reading event message file
+2026/10/30 16:27:06.010089 [INFO] Engine received EB command cfn-hup-exec
+
+2026/10/30 16:27:06.090766 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:934140897085:stack/awseb-e-6ueip8vibz-stack/0374a990-d477-11f1-a2c5-020c465c2cb3 -r AWSEBAutoScalingGroup --region us-east-2
+2026/10/30 16:27:06.277647 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:934140897085:stack/awseb-e-6ueip8vibz-stack/0374a990-d477-11f1-a2c5-020c465c2cb3 -r AWSEBBeanstalkMetadata --region us-east-2
+2026/10/30 16:27:06.462155 [INFO] checking whether command tail-log is applicable to this instance...
+2026/10/30 16:27:06.462173 [INFO] this command is applicable to the instance, thus instance should execute command
+2026/10/30 16:27:06.462178 [INFO] Engine command: (tail-log)
+
+2026/10/30 16:27:06.462235 [INFO] Executing instruction: GetTailLogs
+2026/10/30 16:27:06.462239 [INFO] Tail Logs...
+2026/10/30 16:27:06.464443 [INFO] Running command: tail -n 100 /var/log/web.stdout.log
+2026/10/30 16:27:06.466839 [INFO] Running command: tail -n 100 /var/log/eb-engine.log
+
+
+----------------------------------------
+/var/log/nginx/access.log
+----------------------------------------
+73.33.236.125 - - [30/Oct/2026:15:34:36 +0000] "POST /tasks HTTP/1.1" 201 91 "-" "curl/8.18.0" "-"
+73.33.236.125 - - [30/Oct/2026:15:34:46 +0000] "GET /tasks HTTP/1.1" 200 181 "-" "curl/8.18.0" "-"
+162.62.213.187 - - [30/Oct/2026:16:01:50 +0000] "GET / HTTP/1.1" 404 207 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1" "-"
+43.160.241.129 - - [30/Oct/2026:16:04:31 +0000] "GET / HTTP/1.1" 404 207 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1" "-"
+188.240.59.45 - - [30/Oct/2026:16:14:34 +0000] "GET / HTTP/1.1" 404 207 "-" "Mozilla/5.0 (compatible; Infrawatch/1.0; +https://infrawat.ch/)" "-"
+5.226.140.32 - - [30/Oct/2026:16:14:55 +0000] "GET /api/getData?path=player%3Aplayer%2Fdata&roles=value HTTP/1.1" 404 207 "-" "-" "-"
+73.33.236.125 - - [30/Oct/2026:16:26:47 +0000] "GET /tasks HTTP/1.1" 500 265 "-" "curl/8.18.0" "-"
+
+
+----------------------------------------
+/var/log/nginx/error.log
+----------------------------------------
+2026/10/30 15:33:43 [warn] 2143#2143: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2026/10/30 15:33:44 [warn] 2176#2176: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2026/10/30 15:33:44 [warn] 2177#2177: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2026/10/30 16:24:47 [warn] 4561#4561: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2026/10/30 16:24:47 [warn] 4594#4594: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2026/10/30 16:24:47 [warn] 4595#4595: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+
+
